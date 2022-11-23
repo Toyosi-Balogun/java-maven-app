@@ -13,7 +13,7 @@ def gv
 pipeline {
     agent any
     tools {
-        maven 'maven-3.6'
+        maven 'Maven'
     }
     stages {
         stage("init") {
@@ -34,7 +34,6 @@ pipeline {
             steps {
                 script {
                     buildImage 'typhoenix/my-app:jma-3.0'
-                    dockerLogin()
                     dockerPush 'typhoenix/my-app:jma-3.0'
                 }
             }
