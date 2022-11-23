@@ -2,8 +2,8 @@
 
 library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
         [$class: 'GitSCMSource',
-         remote: 'https://gitlab.com/nanuchi/jenkins-shared-library.git',
-         credentialsId: 'gitlab-credentials'
+         remote: 'https://github.com/Toyosi-Balogun/my-jenkins-shared-library.git',
+         credentialsId: 'github-credentials'
         ]
 )
 
@@ -34,9 +34,9 @@ pipeline {
             steps {
                 script {
 <<<<<<< HEAD
-                    buildImage 'nanajanashia/demo-app:jma-3.0'
+                    buildImage 'typhoenix/my-app:jma-3.0'
                     dockerLogin()
-                    dockerPush 'nanajanashia/demo-app:jma-3.0'
+                    dockerPush 'typhoenix/my-app:jma-3.0'
 =======
                     buildImage 'typhoenix/my-app:jma-3.0'
                     dockerPush 'typhoenix/my-app:jma-3.0'
